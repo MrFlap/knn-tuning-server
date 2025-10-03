@@ -1,0 +1,12 @@
+name: knn_tuning_server
+channels:
+  - defaults
+dependencies:
+  - flask
+  - python=3.9
+  - requests
+  - pip
+  - pip:
+    - optuna
+    - opensearch-benchmark
+    - opensearch-py
