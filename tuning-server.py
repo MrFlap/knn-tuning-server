@@ -51,6 +51,10 @@ class OSCluster:
             '--kill-running-processes',
             '--results-file=results.csv'
         ]
+        if "auth" in CONFIG:
+            cmd.append(
+                f'--client-options="basic_auth_user:\'{CONFIG["auth"]["user"]}\',basic_auth_password:\'{CONFIG["auth"]["password"]}\''
+            )
         return cmd
 
     def run_osb(self):

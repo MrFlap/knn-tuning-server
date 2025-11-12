@@ -1,12 +1,18 @@
 {
   "workload": "vectorsearch",
-  "cluster-url": "127.0.0.1:9200",
+  "cluster-url": "url",
   "workload-params": "vectorsearch/params/faiss-sift-128-l2.json",
   "extra-workload-params": {
-    "target_index_bulk_index_data_set_path": "sift-128-euclidean.hdf5",
+    "target_index_bulk_index_data_set_path": "marco_tasb.hdf5",
+    "target_index_dimension": 384,
+    "hnsw_m": 16,
     "target_index_body": "indices/faiss-index.json"
   },
   "delete-workload-params": [
     "query_body"
-  ]
+  ],
+  "auth": {
+    "username": "XXXXXXXX",
+    "password": "XXXXXXXX"
+  }
 }
