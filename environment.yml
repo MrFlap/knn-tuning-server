@@ -8,5 +8,5 @@ dependencies:
   - pip
   - pip:
     - optuna
-    - opensearch-benchmark
+    - opensearch-benchmark=1.15
     - opensearch-py
