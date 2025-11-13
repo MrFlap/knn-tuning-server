@@ -12,7 +12,7 @@
     "query_body"
   ],
   "auth": {
-    "username": "XXXXXXXX",
+    "user": "XXXXXXXX",
     "password": "XXXXXXXX"
   }
 }
