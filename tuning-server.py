@@ -53,8 +53,9 @@ class OSCluster:
         ]
         if "auth" in CONFIG:
             cmd.append(
-                f'--client-options="basic_auth_user:\'{CONFIG["auth"]["user"]}\',basic_auth_password:\'{CONFIG["auth"]["password"]}\''
-            )
+                f'--client-options=use_ssl:true,verify_certs:true,basic_auth_user:{CONFIG["auth"]["user"]},basic_auth_password:{CONFIG["auth"]["password"]},timeout:300')
+        if "extra_args" in CONFIG:
+            cmd.extend(CONFIG["extra_args"])
         return cmd
 
     def run_osb(self):
