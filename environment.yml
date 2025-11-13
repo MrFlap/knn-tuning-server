@@ -3,10 +3,10 @@ channels:
   - defaults
 dependencies:
   - flask
-  - python=3.9
+  - python=3.10
   - requests
   - pip
   - pip:
     - optuna
-    - opensearch-benchmark=1.15
+    - opensearch-benchmark==2.1
     - opensearch-py
